@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <meta charset="utf-8">
+    <title>pinpinle</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    /* 导航栏 */
+   
+    
+    a {text-decoration:none;}
+    a:link {color:#685254;}      /* 未访问链接*/
+    a:visited {color:#685254;}  /* 已访问链接 */
+    a:hover {font-weight:bold;color: #000000;}  /* 鼠标移动到链接上 */
+    a:active {font-weight:bold;color: #000000;}  /* 鼠标点击时 */
+
+#div1 {width:200px; height:150px;border:1px solid #000000;}
+
+</style>
+</head>
+<!-- 背景 -->
+<body style="background-image:url('timg-7.jpeg'); background-size: 100%;">
+
+
+  
+  <!-- 导航栏 -->
+  <button  style="background-color: #ffffff; width: 150px;border: solid;height: 40px;margin-top: 10%;text-align: center;font-size: 15px;"><a href="index.html" target="_self" >返回主页</a></button>   <br>
+
+     <button id="ti" onclick="yanzheng()" style="background-color: #ffffff; width: 150px;border: solid;height: 40px;margin-top: 2%;text-align: center;font-size: 15px;">提交</button>  <br>
+
+     <button  style="background-color: #ffffff; width: 150px;border: solid;height: 40px;margin-top: 2%;text-align: center;font-size: 15px;"><a href="中等模式.html" target="_self" >换一换</a></button>   
+    
+  <p style="margin-top: 0%;margin-left: 30%;position: absolute;top: 45px;">请选择图片拖放到矩形中完成拼图：</p>
+<p style="margin-top: 0%;margin-left: 70%;position: absolute;top: 45px;">目标拼图：</p>
+   <img src="地铁.JPG" style="width: 200px;height: 270px;position: absolute;right: 190px;top: 100px;" />  
+
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="position: absolute;top: 100px;left: 450px;"></div>
+<div id="div1" ondrop="drop1(event)" ondragover="allowDrop1(event)" style="position: absolute;top: 100px;left: 651px;"></div>
+<div id="div1" ondrop="drop2(event)" ondragover="allowDrop2(event)" style="position: absolute;top: 251px;px;left: 651px;"></div>
+<div id="div1" ondrop="drop3(event)" ondragover="allowDrop3(event)" style="position: absolute;top: 251px;px;left: 450px;"></div>
+<div id="div1" ondrop="drop4(event)" ondragover="allowDrop4(event)" style="position: absolute;top: 402px;px;left: 450px;"></div>
+<div id="div1" ondrop="drop5(event)" ondragover="allowDrop5(event)" style="position: absolute;top: 402px;px;left: 651px;"></div>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<div id="xiyang" style="text-align: center;">
+<img id="drag2" src="地铁4.png" draggable="true" ondragstart="drag2(event)" style="width: 200px;height: 150px;display: inline;" />  
+<img id="drag1" src="地铁5.png" draggable="true" ondragstart="drag1(event)" style="width: 200px;height: 150px;display: inline;" />  
+<img id="drag5" src="地铁1.png" draggable="true" ondragstart="drag5(event)" style="width: 200px;height: 150px;display: inline;" />  
+<img id="drag3" src="地铁3.png" draggable="true" ondragstart="drag3(event)" style="width: 200px;height: 150px;display: inline;" />  
+<img id="drag" src="地铁6.png" draggable="true" ondragstart="drag(event)" style="width: 200px;height: 150px;display: inline;" />  
+
+<img id="drag4" src="地铁2.png" draggable="true" ondragstart="drag4(event)" style="width: 200px;height: 150px;display: inline;" />  
+
+</div>
+
+</body>
+<!-- 轮播图片 -->
+<script type="text/javascript">
+  function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+
+              function allowDrop2(ev)
+            {
+            ev.preventDefault();
+            }
+
+            function drag2(ev)
+           {
+            ev.dataTransfer.setData("Text",ev.target.id);
+            }
+
+            function drop2(ev)
+           {
+         ev.preventDefault();
+            var data=ev.dataTransfer.getData("Text");
+          ev.target.appendChild(document.getElementById(data));
+            }
+
+  function allowDrop1(ev)
+{
+ev.preventDefault();
+}
+
+function drag1(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop1(ev)
+{
+ev.preventDefault();
+var data1=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data1));
+}
+
+  function allowDrop3(ev)
+{
+ev.preventDefault();
+}
+
+function drag3(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop3(ev)
+{
+ev.preventDefault();
+var data3=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data3));
+}
+
+function allowDrop4(ev)
+{
+ev.preventDefault();
+}
+
+function drag4(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop4(ev)
+{
+ev.preventDefault();
+var data3=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data3));
+}
+
+function allowDrop5(ev)
+{
+ev.preventDefault();
+}
+
+function drag5(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop5(ev)
+{
+ev.preventDefault();
+var data3=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data3));
+}
+
+function yanzheng(){
+  alert("拼图成功，你真棒！是穿城而过的火车，时光都变得慢了······");
+}
+
+</script>
+ 
+</script>
+</html>
